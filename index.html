@@ -183,8 +183,28 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
+  <script>
+  const header = document.querySelector(".site-header");
+  const toggle = document.querySelector(".nav-toggle");
+  const mobileLinks = document.querySelectorAll(".mobile-nav a");
+
+  toggle.addEventListener("click", () => {
+    const isOpen = header.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+
+  // Close menu after tapping a link
+  mobileLinks.forEach(a => a.addEventListener("click", () => {
+    header.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open menu");
+  }));
+</script>
+
 </body>
 </html>
+
 
 
 
