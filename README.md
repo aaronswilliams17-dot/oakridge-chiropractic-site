@@ -35,6 +35,8 @@ This project includes intentional UX/UI considerations such as:
 - Semi-transparent hero card for readability over imagery
 - Mobile-friendly spacing and tap targets
 - Consistent layout patterns to reduce cognitive load
+- Navigation adapts for mobile using a hamburger menu to reduce visual clutter
+
 
 ---
 
